@@ -1,0 +1,46 @@
+\section{Finding optimal bandwidth}
+
+\subsection{Part 1}
+\subsubsection{Part (a)}
+
+We know that the estimator for distribution function $\hat{f}$ is given by
+
+\begin{equation}
+    \hat{f}(x) = \sum_{j=1}^m \frac{\hat{p}_j}{h} \mathbbm{1}\left[x \in B_j\right]
+\end{equation}
+
+Also given, $v_j$ is the number of points falling in the $j^{th}$ bin and $\hat{p}_j = \frac{v_j}{n}$.
+
+From this,
+
+\begin{align*}
+    \int \hat{f}(x)^2 dx &= \int \left(\sum_{j=1}^m \frac{\hat{p}_j}{h} \mathbbm{1}\left[x \in B_j\right]\right)^2 dx \\
+    &= \sum_{j=1}^m \int_{B_j} \left(\sum_{j=1}^m \frac{\hat{p}_j}{h} \mathbbm{1}\left[x \in B_j\right]\right)^2 dx \\
+    &= \sum_{j=1}^m \int_{B_j} \left(\frac{\hat{p}_j}{h}\right)^2 dx \\
+    &= \sum_{j=1}^m \left(\frac{\hat{p}_j}{h}\right)^2 \times h \\
+    &= \frac{1}{n^2h} \sum_{j=1}^m v_j^2
+\end{align*}
+
+\subsubsection{Part (b)}
+
+The histogram estimator after removing the $i^{th}$ observation is given by
+
+\begin{equation}
+    \hat{f}_{(-i)}(x) = \sum_{j=1}^m \frac{\hat{p}_{j, -i}}{h} \mathbbm{1}\left[x \in B_j\right]
+\end{equation}
+
+where $\hat{p}_{j, -i} = \frac{v_{j, -i}}{n-1}$ and $v_{j, -i}$ is the number of points falling in the $j^{th}$ bin after removing the $i^{th}$ observation.
+
+Now, 
+
+\begin{align*}
+    \sum_{i=1}^n \hat{f}_{(-1)}(X_i) &= \sum_1^n \sum_{j=1}^m \frac{\hat{p}_{j, -i}}{h} \mathbbm{1}\left[X_i \in B_j\right] \\
+    &= \sum_{i=1}^n\sum_{j=1}^m \frac{v_{j, -i}}{(n-1)h} \mathbbm{1}\left[X_i \in B_j\right] \\
+    &= \sum_{j=1}^m \sum_{i=1}^n \frac{v_{j, -i}}{(n-1)h} \mathbbm{1}\left[X_i \in B_j\right] \\
+    &= \sum_{j=1}^m \frac{v_{j}-1}{(n-1)h} \mathbbm{I}\left[X_i \in B_j\right] & (\text{since whenever }\mathbbm{1}[X_i \in B_j] = 1, v_{j, -i} = v_j - 1 ) \\
+    &= \sum_{j=1}^m \frac{v_{j} -1}{(n-1)h} v_j \\
+    &= \frac{1}{(n-1)h} \sum_{j=1}^m v_j^2 - v_j
+\end{align*}
+
+\subsection{Part 2}
+
