@@ -3,6 +3,11 @@
 \contentsline {subsubsection}{\numberline {1.1.1}Part (a)}{1}{subsubsection.1.1.1}%
 \contentsline {subsubsection}{\numberline {1.1.2}Part (b)}{1}{subsubsection.1.1.2}%
 \contentsline {subsection}{\numberline {1.2}Part 2}{2}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Detecting Anomalous Transactions using KDE}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Designing a custom KDE Class}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Estimating Distribution of Transactions}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Part (a)}{2}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Part (b)}{3}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Part (c)}{3}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Part (d)}{3}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Part (e)}{3}{subsubsection.1.2.5}%
+\contentsline {section}{\numberline {2}Detecting Anomalous Transactions using KDE}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Designing a custom KDE Class}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Estimating Distribution of Transactions}{4}{subsection.2.2}%

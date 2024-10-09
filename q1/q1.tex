@@ -44,3 +44,55 @@ Now,
 
 \subsection{Part 2}
 
+\subsubsection{Part (a)}
+
+The histogram of the filtered data for number of bins = 10 is shown in Figure \ref{fig:q1_2_a}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../q1/images/10binhistogram.png}
+    \caption{Histogram of filtered data with 10 bins}
+    \label{fig:q1_2_a}
+\end{figure}
+
+The values of $\hat{p}_j$ are as follows:
+
+\begin{tabular}
+    { |c|c|c|c|c|c|c|c|c|c|c| }
+    \hline
+    Bin & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+    \hline
+    $\hat{p}_j$ & 0.602 & 1.428 & 0.138 & 0.12 & 0.396 & 0.172 & 0.017 & 0.0 & 0.034 & 0.017 \\
+    \hline
+\end{tabular}
+
+\subsubsection{Part (b)}
+
+The probablility distribution is underfit as the number of bins is too low. The distribution is not smooth and the bins are too wide. This is evident from the histogram in Figure \ref{fig:q1_2_a}.
+
+\subsubsection{Part (c)}
+
+The graph of $\hat{J}(h)$ vs $h$ for the number of bins ranging from 1 to 1000 is shown in Figure \ref{fig:q1_2_c}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../q1/images/crossvalidation.png}
+    \caption{$\hat{J}(h)$ vs $h$}
+    \label{fig:q1_2_c}
+\end{figure}
+
+\subsubsection{Part (d)}
+
+Based on the Cross Validation plot in Figure \ref{fig:q1_2_c}, the optimal number of bins is 50 with a value of $h^\ast = 0.06836$.
+
+\subsubsection{Part (e)}
+
+The histogram of the filtered data for number of bins = 50 is shown in Figure \ref{fig:q1_2_e}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{../q1/images/optimalhistogram.png}
+    \caption{Histogram of filtered data with 50 bins}
+    \label{fig:q1_2_e}
+\end{figure}
+    

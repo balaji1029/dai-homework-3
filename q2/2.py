@@ -35,23 +35,13 @@ kde = EpanechnikovKDE()
 # TODO: Fit the data
 kde.fit(data)
 
-no = 30
+num = 40
 
 # TODO: Plot the estimated density in a 3D plot
-x = np.linspace(-6, 6, no)
-y = np.linspace(-6, 6, no)
+x = np.linspace(-6, 6, num)
+y = np.linspace(-6, 6, num)
 X, Y = np.meshgrid(x, y)
 Z = np.zeros(X.shape)
-
-# X = np.linspace(0, 100, 100)
-# Y = np.linspace(0, 100, 100)
-# X, Y = np.meshgrid(X, Y)
-# Z = np.zeros(X.shape)
-
-# X = np.linspace(0, 100, 100)
-# Y = np.linspace(0, 100, 100)
-# X, Y = np.meshgrid(X, Y)
-# Z = np.zeros(X.shape)
 
 from tqdm import tqdm
 
@@ -61,39 +51,25 @@ def row_wise(row, i, Y):
         value[j] = kde.evaluate(np.array([row[i], Y[j][i]]))
     print('Done with row', i)
     return value
-# def second_half():
-#     for i in range(X.shape[0]//3, X.shape[0]//3 + 1):
-#         for j in tqdm(range(X.shape[1])):
-#             Z[i, j] = kde.evaluate([X[i, j], Y[i, j]])
-#         # print('Done with row', i)
-# def third_half():
-#     for i in range(2*X.shape[0]//3, 2*X.shape[0]//3 + 1):
-#         for j in tqdm(range(X.shape[1])):
-#             Z[i, j] = kde.evaluate([X[i, j], Y[i, j]])
-        # print('Done with row', i)
 
-# t1 = threading.Thread(target=first_half)
-# t2 = threading.Thread(target=second_half)
-# t3 = threading.Thread(target=third_half)
+# import multiprocessing as mp
 
-# t1.start()
-# t2.start()
-# t3.start()
+# # print(mp.cpu_count())
+# pool = mp.Pool(mp.cpu_count())
 
-# t1.join()
-# t2.join()
-# t3.join()
+# for i in range(X.shape[0]):
+#     Z[i] = pool.apply(row_wise, args=(X[i], i, Y))
 
+# pool.close()
 
-import multiprocessing as mp
-
-# print(mp.cpu_count())
-pool = mp.Pool(mp.cpu_count())
-
-for i in range(X.shape[0]):
-    Z[i] = pool.apply(row_wise, args=(X[i], i, Y))
-
-pool.close()
+for i in tqdm(range(X.shape[0])):
+    for j in range(X.shape[1]):
+        Z[i][j] = kde.evaluate(np.array([X[i][j], Y[i][j]]))
 
 # TODO: Save the plot
-np.save('density.npy', Z)
+
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(X, Y, Z, cmap='viridis')
+plt.savefig('3d_plot.png')
+plt.show()
