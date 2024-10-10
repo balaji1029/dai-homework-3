@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Finding optimal bandwidth}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Part 1}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Part (a)}{1}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Part (b)}{1}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2}Part 2}{2}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Part (a)}{2}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Part (b)}{2}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Part (c)}{2}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Part (d)}{3}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Part (e)}{3}{subsubsection.1.2.5}%
+\contentsline {section}{\numberline {2}Detecting Anomalous Transactions using KDE}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Designing a custom KDE Class}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Estimating Distribution of Transactions}{3}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Higher-Order Regression}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Distribution of $B$: }{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Mean and Standard Deviation of $B$: }{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Part (b)}{6}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Non-parametric regression}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Explaining the code:}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bandwidth corresponding to minimum estimated risk: }{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Comments on similarity and dissimilarity}{8}{subsection.4.3}%

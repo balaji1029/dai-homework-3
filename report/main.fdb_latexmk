@@ -1,12 +1,12 @@
 # Fdb version 4
-["pdflatex"] 1728538340.40397 "/home/aditya/Aditya/IIT Bombay/Sophomore Year/CS215/homework-3/report/main.tex" "main.pdf" "main" 1728538343.41466 0
+["pdflatex"] 1728538418.19227 "/home/aditya/Aditya/IIT Bombay/Sophomore Year/CS215/homework-3/report/main.tex" "main.pdf" "main" 1728538421.21089 0
   "../q1/images/10binhistogram.png" 1728488407.28703 5909 8b37de798e31ff927ebce40b7f5d911d ""
   "../q1/images/crossvalidation.png" 1728488407.28803 551873 c35e7207ae30494c3c05fcea3887dea7 ""
   "../q1/images/optimalhistogram.png" 1728488407.28803 5354 b252d6fe973e479a1a3db1685a5c1f5f ""
   "../q1/q1.tex" 1728488407.28803 3511 db8d78007d92d28cc23c74fffec745c7 ""
   "../q2/images/transaction distribution.png" 1728488407.28903 101740 2256fe5b68ad15d2d6d1ffc347b260e2 ""
   "../q2/q2.tex" 1728488407.28903 731 4758ad5b0793dae5cc2240a662d7e05e ""
-  "../q3/q3.tex" 1728538208.36298 5205 cc6903a9067b625f45a033070701f7fb ""
+  "../q3/q3.tex" 1728538417.82623 5234 47411e64977d066c317aec17e9cb9c74 ""
   "../q4/epanechnikov_kernel_regression.png" 1728490327.83539 67397 734fd48648bcc1cea257641e7a0d4f71 ""
   "../q4/gaussian_kernel_regression.png" 1728490285.48176 64203 de5ff016b77e31e57cac49bd4ccda0da ""
   "../q4/q4.tex" 1728490871.33036 3669 c0ee04aa38a4e6d7d07eab1074857707 ""
@@ -122,10 +122,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1726230213.06164 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1726230267 8212109 7341c62aa4b067a509ef5fe5fa144f80 ""
-  "main.aux" 1728538343.29496 5053 16f81fbe048f9392b1be67670cfd3e97 "pdflatex"
-  "main.out" 1728538343.29696 3519 9488745b16996a386bb97b6a07271441 "pdflatex"
+  "main.aux" 1728538421.08841 5053 16f81fbe048f9392b1be67670cfd3e97 "pdflatex"
+  "main.out" 1728538421.08941 3519 9488745b16996a386bb97b6a07271441 "pdflatex"
   "main.tex" 1728538337.0706 732 bd73ff4c83436c437380a266d415c8dc ""
-  "main.toc" 1728538343.29696 1842 3a0acf9d5ed94d2d5fab6d3fb0077bd9 "pdflatex"
+  "main.toc" 1728538421.08941 1842 3a0acf9d5ed94d2d5fab6d3fb0077bd9 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
