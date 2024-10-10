@@ -77,4 +77,26 @@ regressor.fit(X, Y) function fits the data to the polynomial.\\
 regressor.cross\_validation(params) can be used to visualize the results of fitting the model to various degree polynomials. For each degree passed in params, a plot will be generated. The function also prints out the $SS_R$ scores for every parameter, enabling identification of the optimal degree.\\
 Note: To actually display these plots and save the figures, one would have to comment out a few lines of code in the cross\_validation function, which I have commented out for now to avoid needless generation of graphs and saving of files.\\
 regressor.sum\_of\_squares(Y\_true, Y\_pred) and regressor.r2\_score(Y\_true, Y\_pred) return the $SS_R$ and $R^2$ scores respectively.\\
+\subsection{underfitting, overfitting and Correct Fit: }
+I got a severe underfit at degree 2 and some amount of noticeable underfitting at degree 3 (especially at the left top corner).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../q3/degree_2.png}
+    \caption{Degree 2 - underfitting}
+    \label{fig:q3_1}
+\end{figure}
+I got severe overfitting at degree 20 and visible overfitiing at degree 18. On a k-fold cross-validation test, degree 20 had an $SS_R$ almost 1000 greater than that of degree 5 (24631 vs 23135), and at degree 25 the SSR was more than 300 times the optimal value (8681858 vs 23135).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../q3/degree_20.png}
+    \caption{Degree 20 - overfitting}
+    \label{fig:q3_2}
+\end{figure}  
+Optimal fitting that minimized the $SS_R$ during k-fold cross-validation with k=10 occured at degree 5. The $SS_R$ here was 23135.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{../q3/degree_5.png}
+    \caption{Degree 5 - optimal fitting}
+    \label{fig:q3_3}
+\end{figure}
 \newpage 
