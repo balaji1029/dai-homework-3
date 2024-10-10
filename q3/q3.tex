@@ -1,0 +1,74 @@
+\section{Higher-Order Regression}
+\subsection{Distribution of $B$: }
+Let us suppose we are trying to fit the dataset to a functional equation of the form:
+\[
+    Y = \beta_0 + \beta_1 x + \beta_2 x^2 + \cdots + \beta_m x^m + \epsilon
+\]
+where $\epsilon \sim \mathcal{N}(0, \sigma^2)$.
+We have to find the value of $B$ (the estimator of $(\beta_0, \beta_1, \cdots, \beta_m)$) that minimizes
+\[
+    \sum_{i=1}^n (Y_i - B_0 - B_1 x_i - B_2 x_i^2 - \cdots - B_m x_i^m)^2
+\]  
+Taking the derivative w.r.t each of the $B_i's$, we get 
+\begin{align*}
+    &\sum_{i=1}^{n} Y_i = nB_0 + B_1 \sum_{i=1}^{n} x_i + B_2 \sum_{i=1}^{n} x_i^2 + \cdots + B_m \sum_{i=1}^{n} x_i^m\\
+    &\sum_{i=1}^{n} x_i\cdot Y_i = B_0 \sum_{i=1}^{n} x_i + B_1 \sum_{i=1}^{n} x_i^2 + B_2 \sum_{i=1}^{n} x_i^3 + \cdots + B_m \sum_{i=1}^{n} x_i^{m+1}\\
+    &\cdots\\
+    &\sum_{i=1}^{n} x_i^m\cdot Y_i = B_0 \sum_{i=1}^{n} x_i^m + B_1 \sum_{i=1}^{n} x_i^{m+1} + B_2 \sum_{i=1}^{n} x_i^{m+2} + \cdots + B_m \sum_{i=1}^{n} x_i^{2m}
+\end{align*}
+Let us suppose that the matrix $X$ is defined as $X_{ij}=x_i^j$. Note that $A=X^T\cdot X$ is a matrix that satisfies $A_{ij}=\sum_{k=1}^n x_k^{i+j}$ where $A_{ij}$ is the element in the $i\textsuperscript{th}$ row and $j\textsuperscript{th}$ column of $A$. Let $Y$ be the vector of $Y_i$'s. Then, the above equations can be written as:
+\[
+    X^T\cdot Y = (X^T\cdot X)\cdot B
+\]
+We claim that $X^T \cdot X$ is invertible as long as all values of $x$ are distinct. To prove this, we first prove $X$ is invertible. If that is the case, then $X^T$, which has the same determinant as $X$, is invertible, and their product also has a non-zero determinant and is invertible. For the proof of the claim that $X$ is invertible, let us assume for the sake of contradiction that the columns of this matrix are not linearly independent.\\
+That is, let us assume $c_0 v_0 + c_1 v_1 + \cdots + c_m v_m = 0$ where the $c_i$'s are the columns of X and $v_i$'s are real numbers, not all zero. Then we get on the $k\textsubscript{th}$ coordinate (for $k \in \{1,\cdots n\}$):
+\[
+    v_0 + v_1 x_k + \cdots + v_m x_k^m = 0
+\]
+which means $x_k$ is a root of the polynomial $v_0 + v_1 x + \cdots + v_m x^m$. Since this polynomial has at most $m$ roots, we get that two of the $x_k$'s must be equal, which contradicts our assumption that all $x$'s are distinct.\\
+Hence, $X^T \cdot X$ is invertible, and we get that $B$ is given by:
+\[
+    B = (X^T\cdot X)^{-1}\cdot X^T\cdot Y
+\]
+Thus, $B = C\cdot Y$ for some matrix $C$, with m rows and n columns.\\
+$B_{i-1} = \sum_{j=1}^{n} C_{ij} Y_j$ is a linear combination of Gaussian random variables, and hence is Gaussian.\\
+$B$ is a (m+1)-tuple of Gaussian random variables.
+\subsection{Mean and Standard Deviation of $B$: }
+We know $Y=\beta X+\epsilon$, where $\beta=(\beta_0, \beta_1, \cdots, \beta_m)$ and $\epsilon \sim \mathcal{N}(0, \sigma^2)$.\\
+\begin{align*}
+    E[B] &= E[(X^T\cdot X)^{-1}\cdot X^T\cdot Y]\\
+    &= (X^T\cdot X)^{-1}\cdot X^T\cdot E[Y]\\
+    &= (X^T\cdot X)^{-1}\cdot X^T\cdot \beta X\\
+    &= (X^T\cdot X)^{-1}\cdot X^T\cdot X\cdot \beta \\
+    &= \beta
+\end{align*}
+
+Above, notice that we have used the fact that the component-wise computation of the mean of B can be done simultaneously.
+
+To find the variance, we again use matrix $C$ as defined above. $B_{i-1}=\sum_{k=1}^{n} C_{ik} Y_k$ and $B_{j-1}=\sum_{k=1}^n C_{jk} Y_k$.\\
+Hence, Cov$(B_{i-1}, B_{j-1})$ = Cov$(\sum_{k=1}^{n} C_{ik} Y_k, \sum_{k=1}^{n} C_{jk} Y_k)$ = $\sum_{r=1}^n \sum_{l=1}^n C_{il} C_{jr} \text{Cov}(Y_l, Y_r)$.\\
+Now, $Y_l$ and $Y_r$ are independent for $l \neq r$, and hence Cov$(Y_l, Y_r)=0$ for $l \neq r$ and Var($Y_l$) if $l=r$.\\
+Since Var($Y_l$)=$\sigma^2$, we get that Cov$(B_{i-1}, B_{j-1})$ = $\sigma^2 \sum_{k=1}^n C_{ik} C_{jk}$.\\
+The final term here is equal to the $(i, j)$\textsuperscript{th} element of the matrix $C\cdot C^T$.\\
+Thus, Cov(B)= $\sigma^2 C\cdot C^T$.\\
+Now, 
+\begin{align*}
+    C^T=((X^T\cdot X)^{-1}\cdot X^T)^T\\
+    &=X\cdot ((X^T\cdot X)^{-1})^T\\
+    &=X\cdot (X^T\cdot X)^{-1}
+\end{align*}
+Here, the last point follows from the symmetry of $X^T\cdot X$, which implies that its inverse is also a symmetric matrix.\\
+The above statement can be proven as follows: suppose Y is a symmetric invertible matrix, then $Y\cdot Y^{-1} = I = (Y^{-1})^T\cdot Y^T=(Y^{-1})^T\cdot Y$.\\
+Using the fact that $Y^{-1}\cdot Y=I = (Y^{-1})^T\cdot Y^T$, we get that $Y^{-1}$ is symmetric, since inverses are unique.\\
+\\
+Since Cov($B_i, B_i$)=Var($B_i$), we can get the variance of $B_i$ as the i\textsuperscript{th} diagonal element of $\sigma^2 X\cdot (X^T\cdot X)^{-1}$.\\
+
+The quantity $\sigma^2$ can be estimated using the sum of squares of the residuals. That is, if we let
+\[
+    SS_R=\sum_{i=1}^n (Y_i - B_0 - B_1 x_i - B_2 x_i^2 - \cdots - B_m x_i^m)^2
+\] 
+then, it can be shown that $\sigma^2 = \frac{SS_R}{n-m-1}$. This is because $\frac{SS_R}{\sigma^2} \sim \chi_{n-(k+1)}^2$.
+\subsection{Part (b)}
+In computing the mean of $B_i$ above, we concluded that $E[B_i]=\beta_i$.\\
+Thus, $E[B]=\beta$, where $\beta$ is as defined before. This is the same as the true value of the coefficients, hence B is an unbiased estimator.\\ 
+\newpage 
