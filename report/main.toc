@@ -15,7 +15,8 @@
 \contentsline {subsection}{\numberline {3.1}Distribution of $B$: }{5}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Mean and Standard Deviation of $B$: }{6}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Part (b)}{6}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Non-parametric regression}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Explaining the code:}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Bandwidth corresponding to minimum estimated risk: }{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Comments on similarity and dissimilarity}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {3.4}Explaining the code: }{6}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Non-parametric regression}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Explaining the code:}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bandwidth corresponding to minimum estimated risk: }{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Comments on similarity and dissimilarity}{9}{subsection.4.3}%

@@ -71,4 +71,10 @@ then, it can be shown that $\sigma^2 = \frac{SS_R}{n-m-1}$. This is because $\fr
 \subsection{Part (b)}
 In computing the mean of $B_i$ above, we concluded that $E[B_i]=\beta_i$ for all $i\in\{0,\cdots,m\}$.\\
 Thus, $E[B]=\beta$, where $\beta$ is as defined before. This is the same as the true value of the coefficients, hence B is an unbiased estimator.\\ 
+\subsection{Explaining the code: }
+The code contains a HigherOrderRegression class. You should pass the desired degree of the class while initializing it. Eg. regressor = HigherOrderRegression(3) will create a regressor that fits a cubic polynomial to the data.\\
+regressor.fit(X, Y) function fits the data to the polynomial.\\
+regressor.cross\_validation(params) can be used to visualize the results of fitting the model to various degree polynomials. For each degree passed in params, a plot will be generated. The function also prints out the $SS_R$ scores for every parameter, enabling identification of the optimal degree.\\
+Note: To actually display these plots and save the figures, one would have to comment out a few lines of code in the cross\_validation function, which I have commented out for now to avoid needless generation of graphs and saving of files.\\
+regressor.sum\_of\_squares(Y\_true, Y\_pred) and regressor.r2\_score(Y\_true, Y\_pred) return the $SS_R$ and $R^2$ scores respectively.\\
 \newpage 
