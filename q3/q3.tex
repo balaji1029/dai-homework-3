@@ -68,9 +68,37 @@ The quantity $\sigma^2$ can be estimated using the sum of squares of the residua
     SS_R=\sum_{i=1}^n (Y_i - B_0 - B_1 x_i - B_2 x_i^2 - \cdots - B_m x_i^m)^2
 \] 
 then, it can be shown that $\sigma^2 = \frac{SS_R}{n-m-1}$. This is because $\frac{SS_R}{\sigma^2} \sim \chi_{n-(k+1)}^2$.
-\subsection{Part (b)}
+\subsection{Proving $B$ is unbiased: }
 In computing the mean of $B_i$ above, we concluded that $E[B_i]=\beta_i$ for all $i\in\{0,\cdots,m\}$.\\
 Thus, $E[B]=\beta$, where $\beta$ is as defined before. This is the same as the true value of the coefficients, hence B is an unbiased estimator.\\ 
+\subsection{Part 1: }
+We have seen in class that the estimator in simple linear regression can be modelled as $\hat{y}=B \hat{x} + A$ where \[
+    B=\frac{\sum_{i=1}^{n}x_i\cdot y_i - n \bar{x}\bar{y}}{\sum_{i=1}^{n}x_i^2 - n \bar{x}^2}
+\]
+\[
+    A=\bar{y} - B\bar{x}
+\]
+Using this estimate at $y=\bar{x}$, we get $\hat{y}=B \bar{x}+\bar{y}-B\bar{x} = \bar{y}$. Thus, $(\bar{x}, \bar{y})$ is always on the regression line.\\
+\subsection{Part 2: }
+We want to reduce the sum of squares error, which is given by:
+\[
+    SS_R = \sum_{i=1}^{n} (y_i - \beta_0^* - \beta_1^* (x_i-\bar{x}))^2
+\]  
+Taking the derivatives w.r.t $\beta_0^*$ and $\beta_1^*$,
+\begin{align}
+    &\sum_{i=1}^n (y_i-\beta_0^*-\beta_1^*(x_i-\bar{x}))=0\\
+    &\sum_{i=1}^n (y_i-\beta_0^*)=0\\
+    &\frac{\sum_{i=1}^n y_i}{n}=\beta_0^*\\
+    &\beta_0^*=\bar{y}
+\end{align}
+The second last line stems from the fact that $\sum_{i=1}^n(x_i-\bar{x})=0$.
+\begin{align}
+    &\sum_{i=1}^n (y_i-\beta_0^*-\beta_1^*(x_i-\bar{x}))(x_i-\bar{x})=0\\
+    &\sum_{i=1}^n (y_i)(x_i-\bar{x}) - \beta_1^*\sum_{i=1}^n (x_i-\bar{x})^2=0\\
+    &\beta_1^*=\frac{\sum_{i=1}^n (y_i\cdot x_i)-n\bar{y}\bar{x}}{\sum_{i=1}^n x_i^2 - n\bar{x}^2}
+\end{align}
+Thus, $\beta_0^*= \bar{y}$ and $\beta_1^* = B$, with $B=\frac{\sum_{i=1}^n (y_i\cdot x_i)-n\bar{y}\bar{x}}{\sum_{i=1}^n x_i^2 - n\bar{x}^2}$.\\
+In comparison, the simple linear regression model gives $\beta_0 = \bar{y}-B\bar{x}$ and $\beta_1 = B$. These results are very intuitive and in fact both models give us the same result, with $A^*=\bar{y}-B\bar{z}=\bar{y}$ (since $\sum_{i=1}^n(x_i-\bar{x})=0$). As for B, B is the ratio of covariance of z,y to variance of z, and since variance and covariance are not affected by a linear shift, these are equivalent to the covariance of x, y and variance of x respectively.\\
 \subsection{Explaining the code: }
 The code contains a HigherOrderRegression class. You should pass the desired degree of the class while initializing it. Eg. regressor = HigherOrderRegression(3) will create a regressor that fits a cubic polynomial to the data.\\
 regressor.fit(X, Y) function fits the data to the polynomial.\\

@@ -14,9 +14,13 @@
 \contentsline {section}{\numberline {3}Higher-Order Regression}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Distribution of $B$: }{5}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Mean and Standard Deviation of $B$: }{6}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Part (b)}{6}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Explaining the code: }{6}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Non-parametric regression}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Explaining the code:}{8}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Bandwidth corresponding to minimum estimated risk: }{8}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Comments on similarity and dissimilarity}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {3.3}Proving $B$ is unbiased: }{6}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Part 1: }{6}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Part 2: }{7}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Explaining the code: }{7}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}underfitting, overfitting and Correct Fit: }{8}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}$SS_R$ and $R^2$ scores: }{9}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Non-parametric regression}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Explaining the code:}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Bandwidth corresponding to minimum estimated risk: }{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Comments on similarity and dissimilarity}{11}{subsection.4.3}%
