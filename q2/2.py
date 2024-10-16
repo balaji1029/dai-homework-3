@@ -15,7 +15,7 @@ class EpanechnikovKDE:
         """Epanechnikov kernel function."""
         diff = (x - xi)/self.bandwidth
         if np.linalg.norm(diff) <= 1:
-            return 0.75 * (1 - np.dot(diff, diff))
+            return 3 * (1 - np.dot(diff, diff)) / np.pi
         return 0
 
     def evaluate(self, x):
@@ -28,14 +28,17 @@ class EpanechnikovKDE:
 # Load the data from the NPZ file
 data_file = np.load('transaction_data.npz')
 data = data_file['data']
-
+# Normalize the data by scaling it between min and max
+data_min = np.min(data)
+data_max = np.max(data)
+data_normalized = (data - data_min) / (data_max - data_min)
 # TODO: Initialize the EpanechnikovKDE class
 kde = EpanechnikovKDE()
 
 # TODO: Fit the data
 kde.fit(data)
 
-num = 40
+num = 60
 
 # TODO: Plot the estimated density in a 3D plot
 x = np.linspace(-6, 6, num)
@@ -43,33 +46,26 @@ y = np.linspace(-6, 6, num)
 X, Y = np.meshgrid(x, y)
 Z = np.zeros(X.shape)
 
-from tqdm import tqdm
+mesh = np.array([X.flatten(), Y.flatten()]).T
 
-def row_wise(row, i, Y):
-    value = np.zeros(row.shape)
-    for j in range(Y.shape[0]):
-        value[j] = kde.evaluate(np.array([row[i], Y[j][i]]))
-    print('Done with row', i)
-    return value
+mesh = mesh[:, np.newaxis, :]
+data = kde.data[np.newaxis, :, :]
 
-# import multiprocessing as mp
+diff = (mesh - data)/kde.bandwidth
 
-# # print(mp.cpu_count())
-# pool = mp.Pool(mp.cpu_count())
+norm = np.sum(diff**2, axis=2)
 
-# for i in range(X.shape[0]):
-#     Z[i] = pool.apply(row_wise, args=(X[i], i, Y))
+norm = np.where(norm > 1, 1, norm)
 
-# pool.close()
+kernel_values = 3 * (1 - norm) / np.pi
 
-for i in tqdm(range(X.shape[0])):
-    for j in range(X.shape[1]):
-        Z[i][j] = kde.evaluate(np.array([X[i][j], Y[i][j]]))
+kernel_values_sum = np.sum(kernel_values, axis=1) / (len(kde.data) * kde.bandwidth)
 
-# TODO: Save the plot
+Z = kernel_values_sum.reshape(X.shape)
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_surface(X, Y, Z, cmap='viridis')
-plt.savefig('3d_plot.png')
+ax.set_title('Estimated Density')
+plt.savefig('images/transaction_distribution.png')
 plt.show()

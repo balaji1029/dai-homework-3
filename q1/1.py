@@ -12,7 +12,7 @@ n = len(final_data)
 # plt.title('$%s$'%title)
 # plt.show()
 
-counts, bins = np.histogram(final_data, bins=10)
+counts, bins = np.histogram(final_data, bins=10, range=(0, 4))
 h = bins[1] - bins[0]
 p = counts / (h * n)
 print(p)
@@ -20,7 +20,7 @@ print(p)
 estimator = []
 bin_widths = []
 for bin_count in range(1, 1001):
-    counts, bins = np.histogram(final_data, bins=bin_count)
+    counts, bins = np.histogram(final_data, bins=bin_count, range=(0, 4))
     bin_width = bins[1] - bins[0]
     estimate = (1/(n**2 * bin_width)) * np.sum(counts**2)
     estimate -= (2/(n*(n-1)*bin_width)) * np.sum(counts**2 - counts)
@@ -36,10 +36,10 @@ for bin_count in range(1, 1001):
 # plt.show()
 # np.argmin(estimator), bin_widths[np.argmin(estimator)]
 
-optimal_bandwidth = np.argmin(estimator) 
+optimal_bandwidth = np.argmin(estimator)
 h_star = bin_widths[np.argmin(estimator)]
 
-# plt.hist(final_data, bins=optimal_bandwidth)
+# plt.hist(final_data, bins=np.argmin(estimator)+1, range=(0, 4))
 # title = r'\hat{p}(x)'
 # plt.title('$%s$'%title)
 # plt.show()

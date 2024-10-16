@@ -1,8 +1,3 @@
-from ossaudiodev import SOUND_MIXER_LINE1
-import scipy
-import numpy as np
-import matplotlib.pyplot as plt
-
 class NadarayaKernel:
 
     def __init__(self, bandwidth = 1):
@@ -14,16 +9,13 @@ class NadarayaKernel:
         self.data = np.array(data.drop(['yield'], axis=1))
         self.yi = np.array(data['yield'])
 
-    
     def kernel(self, x, xi):
         d = x.shape[0]
-        # print(x.shape, xi.shape)
-        # print((x - xi).shape, self.bandwidth.shape)
-        # print(np.matmul((x - xi), self.bandwidth))
-        value = 1 - (1/3 * np.matmul((x - xi), (x - xi).T))
-        # print('Yay', value)
-        return (1 / (np.linalg.det(self.bandwidth) ** d)) * max(0, value)
-    
+        diff = x-xi
+        norm = np.linalg.norm(diff)
+        argument = norm / self.bandwidth
+        return (1 / np.sqrt(2 * np.pi)) * np.exp(-0.5 * argument**2)
+
     def evaluate(self, x):
         sum1 = 0
         sum2 = 0
@@ -31,6 +23,18 @@ class NadarayaKernel:
             kernel = self.kernel(x, xi)
             sum1 += kernel * self.yi[i]
             sum2 += kernel
-        # print(sum1, sum2)
         return 0 if sum2 == 0 else sum1 / sum2
 
+    def predict(self, test):
+        test = np.array(test)
+        test_expanded = test[:, np.newaxis, :]
+        data_expanded = self.data[np.newaxis, :, :]
+        diff = (test_expanded - data_expanded)/self.bandwidth
+        nor = np.sum(diff**2, axis=2)
+        # kernel_values = (1 / np.sqrt(2 * np.pi)) * np.exp(-0.5 * (nor / self.bandwidth)**2)
+        # Epachnikov kernel
+        nor = np.where(nor > 1, 1, nor)
+        kernel_values = 0.75 * (1 - nor)
+        kernel_values_sum = np.sum(kernel_values, axis=1)
+        kernel_values_sum = np.where(kernel_values_sum == 0, 1, kernel_values_sum)
+        return np.sum(kernel_values * self.yi, axis=1) / kernel_values_sum

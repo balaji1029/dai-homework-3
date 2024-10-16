@@ -127,14 +127,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT ./main.out
-INPUT ./main.out
-INPUT main.out
-INPUT main.out
-OUTPUT main.pdf
-INPUT ./main.out
-INPUT ./main.out
 OUTPUT main.out
+OUTPUT main.pdf
 INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -163,9 +157,14 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT ./main.toc
-INPUT ./main.toc
-INPUT main.toc
+OUTPUT main.toc
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT ../q1/q1.tex
+INPUT ../q1/q1.tex
+INPUT ../q1/q1.tex
+INPUT ../q1/q1.tex
+INPUT ../q1/q1.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
@@ -175,14 +174,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-OUTPUT main.toc
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT ../q1/q1.tex
-INPUT ../q1/q1.tex
-INPUT ../q1/q1.tex
-INPUT ../q1/q1.tex
-INPUT ../q1/q1.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
@@ -210,11 +201,11 @@ INPUT ../q2/q2.tex
 INPUT ../q2/q2.tex
 INPUT ../q2/q2.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT ../q2/images/transaction distribution.png
-INPUT ../q2/images/transaction distribution.png
-INPUT ../q2/images/transaction distribution.png
-INPUT ../q2/images/transaction distribution.png
-INPUT ../q2/images/transaction distribution.png
+INPUT ../q2/images/transaction_distribution.png
+INPUT ../q2/images/transaction_distribution.png
+INPUT ../q2/images/transaction_distribution.png
+INPUT ../q2/images/transaction_distribution.png
+INPUT ../q2/images/transaction_distribution.png
 INPUT ../q3/q3.tex
 INPUT ../q3/q3.tex
 INPUT ../q3/q3.tex
