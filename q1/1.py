@@ -7,7 +7,8 @@ filter_1 = data['D (Mpc)'][:1500]
 final_data = filter_1[filter_1 < 4]
 n = len(final_data)
 
-# plt.hist(final_data, bins=10, range=(0, 4))
+# counts, bins = np.histogram(final_data, bins=10, range=(0, 4))
+# plt.stairs(counts/n, bins, fill=True)
 # title = r'\hat{p}(x)'
 # plt.title('Probability estimate with 10 bins')
 # plt.xlabel('Distance (Mpc)')
