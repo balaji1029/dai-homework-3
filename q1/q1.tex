@@ -9,9 +9,7 @@ We know that the estimator for distribution function $\hat{f}$ is given by
     \hat{f}(x) = \sum_{j=1}^m \frac{\hat{p}_j}{h} \mathbbm{1}\left[x \in B_j\right]
 \end{equation}
 
-Also given, $v_j$ is the number of points falling in the $j^{th}$ bin and $\hat{p}_j = \frac{v_j}{n}$.
-
-From this,
+\hspace{-14pt}Also given, $v_j$ is the number of points falling in the $j^{th}$ bin and $\hat{p}_j = \frac{v_j}{n}$. Using this we get,
 
 \begin{align*}
     \int \hat{f}(x)^2 dx &= \int \left(\sum_{j=1}^m \frac{\hat{p}_j}{h} \mathbbm{1}\left[x \in B_j\right]\right)^2 dx \\
@@ -29,15 +27,13 @@ The histogram estimator after removing the $i^{th}$ observation is given by
     \hat{f}_{(-i)}(x) = \sum_{j=1}^m \frac{\hat{p}_{j, -i}}{h} \mathbbm{1}\left[x \in B_j\right]
 \end{equation}
 
-where $\hat{p}_{j, -i} = \frac{v_{j, -i}}{n-1}$ and $v_{j, -i}$ is the number of points falling in the $j^{th}$ bin after removing the $i^{th}$ observation.
-
-Now, 
+\hspace{-19pt} where $\hat{p}_{j, -i} = \frac{v_{j, -i}}{n-1}$ and $v_{j, -i}$ is the number of points falling in the $j^{th}$ bin after removing the $i^{th}$ observation. Now, 
 
 \begin{align*}
-    \sum_{i=1}^n \hat{f}_{(-1)}(X_i) &= \sum_1^n \sum_{j=1}^m \frac{\hat{p}_{j, -i}}{h} \mathbbm{1}\left[X_i \in B_j\right] \\
+    \sum_{i=1}^n \hat{f}_{(-i)}(X_i) &= \sum_{i=1}^n \sum_{j=1}^m \frac{\hat{p}_{j, -i}}{h} \mathbbm{1}\left[X_i \in B_j\right] \\
     &= \sum_{i=1}^n\sum_{j=1}^m \frac{v_{j, -i}}{(n-1)h} \mathbbm{1}\left[X_i \in B_j\right] \\
     &= \sum_{j=1}^m \sum_{i=1}^n \frac{v_{j, -i}}{(n-1)h} \mathbbm{1}\left[X_i \in B_j\right] \\
-    &= \sum_{j=1}^m \frac{v_{j}-1}{(n-1)h} \mathbbm{I}\left[X_i \in B_j\right] & (\text{since whenever }\mathbbm{1}[X_i \in B_j] = 1, v_{j, -i} = v_j - 1 ) \\
+    &= \sum_{j=1}^m \frac{v_{j}-1}{(n-1)h} \left( \sum_{i=1}^n \mathbbm{1}\left[X_i \in B_j\right]\right) & (\text{since whenever }\mathbbm{1}[X_i \in B_j] = 1, v_{j, -i} = v_j - 1 ) \\
     &= \sum_{j=1}^m \frac{v_{j} -1}{(n-1)h} v_j \\
     &= \frac{1}{(n-1)h} \sum_{j=1}^m (v_j^2 - v_j)
 \end{align*}
@@ -96,4 +92,5 @@ The histogram of the filtered data for number of bins = 50 is shown in Figure \r
     \label{fig:q1_2_e}
 \end{figure}
 
+\hspace{-16pt}The graph is now just right and is neither oversmoothed nor undersmoothed. This is clearly evidnent when we compare the histograms in Figure \ref{fig:q1_2_a} we can realize that the data will have a higher variance leading to an overall higher risk as compared to \ref{fig:q1_2_e}.
 \newpage
