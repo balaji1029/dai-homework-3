@@ -7,9 +7,11 @@ filter_1 = data['D (Mpc)'][:1500]
 final_data = filter_1[filter_1 < 4]
 n = len(final_data)
 
-# plt.hist(final_data, bins=10)
+# plt.hist(final_data, bins=10, range=(0, 4))
 # title = r'\hat{p}(x)'
-# plt.title('$%s$'%title)
+# plt.title('Probability estimate with 10 bins')
+# plt.xlabel('Distance (Mpc)')
+# plt.ylabel('$%s$'%title)
 # plt.show()
 
 counts, bins = np.histogram(final_data, bins=10, range=(0, 4))
@@ -29,6 +31,7 @@ for bin_count in range(1, 1001):
 
 # plt.figure(dpi=1000)
 # plt.plot(bin_widths, estimator)
+# # plt.plot(range(1, 1001), estimator)
 # title = r'\hat{J}(h)'
 # plt.title('$%s$'%title + ' vs h')
 # plt.xlabel('h')
@@ -39,9 +42,12 @@ for bin_count in range(1, 1001):
 optimal_bandwidth = np.argmin(estimator)
 h_star = bin_widths[np.argmin(estimator)]
 
-# plt.hist(final_data, bins=np.argmin(estimator)+1, range=(0, 4))
+# count, bins = np.histogram(final_data, bins=np.argmin(estimator)+1, range=(0, 4))
+# plt.stairs(count/n, bins, fill=True)
 # title = r'\hat{p}(x)'
-# plt.title('$%s$'%title)
+# plt.title('Probablity estimate with optimal bin width')
+# plt.xlabel('Distance (Mpc)')
+# plt.ylabel('$%s$'%title)
 # plt.show()
 
 print(h_star)
