@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1729097979.62325 "d:/Sem 3/DAI/homework-3/report/main.tex" "main.pdf" "main" 1729097982.09075 0
+["pdflatex"] 1729099548.03878 "d:/Sem 3/DAI/homework-3/report/main.tex" "main.pdf" "main" 1729099549.9328 0
   "../q1/images/10binhistogram.png" 1729096213 5687 2b8798559c96c01dc6db2f729b9403b2 ""
   "../q1/images/crossvalidation.png" 1729096213 573331 8d9ac588fd01fd6bc7125140d8567d52 ""
   "../q1/images/optimalhistogram.png" 1729096213 5634 cb93a2b31acc4b5c7fc057a7e91096be ""
@@ -9,7 +9,7 @@
   "../q3/degree_2.png" 1729096213 34942 7dd90b736257c2026f2ffb5d6c083c9d ""
   "../q3/degree_20.png" 1729096213 36906 ae4daf0f1fa520ec6425e719a2132144 ""
   "../q3/degree_5.png" 1729096213 36196 be94b90f2dc2ef49c8be8d78a5fee1bb ""
-  "../q3/q3.tex" 1729096213 11170 be0ff5d67f2e67bff57d71a978759881 ""
+  "../q3/q3.tex" 1729099546 11170 be0ff5d67f2e67bff57d71a978759881 ""
   "../q4/epanechnikov_kernel_regression.png" 1729096213 67397 11ab28a91eddc0a360ebed6124b7c64a ""
   "../q4/gaussian_kernel_regression.png" 1729096213 64203 9b0dc7c9dfe920eee154f1a364aaf8e7 ""
   "../q4/q4.tex" 1729096213 3704 c0ee04aa38a4e6d7d07eab1074857707 ""
@@ -125,10 +125,10 @@
   "C:/Users/mouli/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/mouli/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "d:/Sem 3/DAI/homework-3/report/main.tex" 1729096213 777 bd73ff4c83436c437380a266d415c8dc ""
-  "main.aux" 1729097981 6378 f3bb286cc60b395a39683e3317aae6ab "pdflatex"
-  "main.out" 1729097981 4430 9dd7a807e148c41b70bf415000870b48 "pdflatex"
+  "main.aux" 1729099549 6378 f3bb286cc60b395a39683e3317aae6ab "pdflatex"
+  "main.out" 1729099549 4430 9dd7a807e148c41b70bf415000870b48 "pdflatex"
   "main.tex" 1729096213 777 bd73ff4c83436c437380a266d415c8dc ""
-  "main.toc" 1729097981 2298 70648fd402aa541159bd259cd4e0ab72 "pdflatex"
+  "main.toc" 1729099549 2298 70648fd402aa541159bd259cd4e0ab72 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
