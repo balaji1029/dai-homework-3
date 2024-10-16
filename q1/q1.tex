@@ -58,32 +58,48 @@ The values of $\hat{p}_j$ are as follows:
     \hline
     Bin & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
     \hline
-    $\hat{p}_j$ & 0.602 & 1.428 & 0.138 & 0.12 & 0.396 & 0.172 & 0.017 & 0.0 & 0.034 & 0.017 \\
+    $\hat{p}_j$ & 0.006 & 0.382 & 0.324 & 0.053 & 0.112 & 0.1 & 0.006 & 0.0 & 0.012 & 0.006 \\
     \hline
 \end{tabular}
 
 \subsubsection{Part (b)}
 
-The probablility distribution is undersmoothed as the number of bins is too low. The distribution is not smooth and the bins are too wide. This is evident from the histogram in Figure \ref{fig:q1_2_a}.
+The probablility distribution is underfit as the number of bins is too low. The distribution is not smooth and the bins are too wide. This is evident from the histogram in Figure \ref{fig:q1_2_a}.
 
 \subsubsection{Part (c)}
 
 The graph of $\hat{J}(h)$ vs $h$ for the number of bins ranging from 1 to 1000 is shown in Figure \ref{fig:q1_2_c}.
 
-\begin{figure}[H]
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{../q1/images/crossvalidation.png}
+%     \caption{$\hat{J}(h)$ vs $h$}
+%     \label{fig:q1_2_c}
+% \end{figure}
+
+\begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{../q1/images/crossvalidation.png}
-    \caption{$\hat{J}(h)$ vs $h$}
-    \label{fig:q1_2_c}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../q1/images/bins.png}
+        \caption{Histogram of filtered data with 10 bins}
+        \label{fig:q1_2_a}
+    \end{subfigure}
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../q1/images/crossvalidation.png}
+        \caption{$\hat{J}(h)$ vs $h$}
+        \label{fig:q1_2_c}
+    \end{subfigure}
 \end{figure}
 
 \subsubsection{Part (d)}
 
-Based on the Cross Validation plot in Figure \ref{fig:q1_2_c}, the optimal number of bins is 50 with a value of $h^\ast = 0.06836$.
+Based on the Cross Validation plot in Figure \ref{fig:q1_2_c}, the optimal number of bins is 48 with a value of $h^\ast = 0.0833$.
 
 \subsubsection{Part (e)}
 
-The histogram of the filtered data for number of bins = 50 is shown in Figure \ref{fig:q1_2_e}.
+The histogram of the filtered data for number of bins = 48 is shown in Figure \ref{fig:q1_2_e}.
 
 \begin{figure}[H]
     \centering
@@ -92,5 +108,5 @@ The histogram of the filtered data for number of bins = 50 is shown in Figure \r
     \label{fig:q1_2_e}
 \end{figure}
 
-\hspace{-16pt}The graph is now just right and is neither oversmoothed nor undersmoothed. This is clearly evidnent when we compare the histograms in Figure \ref{fig:q1_2_a} we can realize that the data will have a higher variance leading to an overall higher risk as compared to \ref{fig:q1_2_e}.
+\hspace{-16pt}The graph is now just right and is neither oversmoothed nor undersmoothed. This is clearly evident when we compare the histograms in Figure \ref{fig:q1_2_a} we can realize that the data will have a higher variance leading to an overall higher risk as compared to \ref{fig:q1_2_e}.
 \newpage

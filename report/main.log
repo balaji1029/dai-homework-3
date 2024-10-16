@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.3)  16 OCT 2024 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.4.3)  16 OCT 2024 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -303,7 +303,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count294
 \l__pdf_internal_box=\box55
-) (main.aux)
+) (main.aux
+
+LaTeX Warning: Label `fig:q1_2_a' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -402,24 +406,29 @@ LaTeX Font Info:    Trying to load font information for U+bbm on input line 9.
  (C:\Users\mouli\AppData\Local\Programs\MiKTeX\tex/latex/bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [1]
-<../q1/images/10binhistogram.png, id=160, 369.38pt x 269.005pt>
+<../q1/images/10binhistogram.png, id=165, 399.4925pt x 279.0425pt>
 File: ../q1/images/10binhistogram.png Graphic file (type png)
 <use ../q1/images/10binhistogram.png>
 Package pdftex.def Info: ../q1/images/10binhistogram.png  used on input line 49.
-(pdftex.def)             Requested size: 215.90616pt x 157.23387pt.
-<../q1/images/crossvalidation.png, id=164, 5856.88126pt x 4603.1975pt>
+(pdftex.def)             Requested size: 215.90616pt x 150.80843pt.
+<../q1/images/bins.png, id=169, 5544.715pt x 3928.6775pt>
+File: ../q1/images/bins.png Graphic file (type png)
+<use ../q1/images/bins.png>
+Package pdftex.def Info: ../q1/images/bins.png  used on input line 84.
+(pdftex.def)             Requested size: 194.31422pt x 137.63765pt.
+<../q1/images/crossvalidation.png, id=170, 5856.88126pt x 4603.1975pt>
 File: ../q1/images/crossvalidation.png Graphic file (type png)
 <use ../q1/images/crossvalidation.png>
-Package pdftex.def Info: ../q1/images/crossvalidation.png  used on input line 75.
-(pdftex.def)             Requested size: 215.90616pt x 169.62729pt.
+Package pdftex.def Info: ../q1/images/crossvalidation.png  used on input line 90.
+(pdftex.def)             Requested size: 194.31422pt x 152.69969pt.
  [2 <../q1/images/10binhistogram.png>]
-<../q1/images/optimalhistogram.png, id=174, 369.38pt x 269.005pt>
+<../q1/images/optimalhistogram.png, id=180, 406.51875pt x 279.0425pt>
 File: ../q1/images/optimalhistogram.png Graphic file (type png)
 <use ../q1/images/optimalhistogram.png>
-Package pdftex.def Info: ../q1/images/optimalhistogram.png  used on input line 90.
-(pdftex.def)             Requested size: 194.31422pt x 141.51295pt.
- [3 <../q1/images/crossvalidation.png> <../q1/images/optimalhistogram.png>]) (../q2/q2.tex
-<../q2/images/transaction_distribution.png, id=184, 462.528pt x 346.896pt>
+Package pdftex.def Info: ../q1/images/optimalhistogram.png  used on input line 106.
+(pdftex.def)             Requested size: 194.31422pt x 133.38109pt.
+ [3 <../q1/images/bins.png> <../q1/images/crossvalidation.png> <../q1/images/optimalhistogram.png>]) (../q2/q2.tex
+<../q2/images/transaction_distribution.png, id=193, 462.528pt x 346.896pt>
 File: ../q2/images/transaction_distribution.png Graphic file (type png)
 <use ../q2/images/transaction_distribution.png>
 Package pdftex.def Info: ../q2/images/transaction_distribution.png  used on input line 19.
@@ -484,18 +493,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--108
 
  []
 
-<../q3/degree_2.png, id=204, 462.528pt x 346.896pt>
+<../q3/degree_2.png, id=213, 462.528pt x 346.896pt>
 File: ../q3/degree_2.png Graphic file (type png)
 <use ../q3/degree_2.png>
 Package pdftex.def Info: ../q3/degree_2.png  used on input line 112.
 (pdftex.def)             Requested size: 215.90616pt x 161.92957pt.
 [7]
-<../q3/degree_20.png, id=217, 462.528pt x 346.896pt>
+<../q3/degree_20.png, id=226, 462.528pt x 346.896pt>
 File: ../q3/degree_20.png Graphic file (type png)
 <use ../q3/degree_20.png>
 Package pdftex.def Info: ../q3/degree_20.png  used on input line 119.
 (pdftex.def)             Requested size: 215.90616pt x 161.92957pt.
-<../q3/degree_5.png, id=218, 462.528pt x 346.896pt>
+<../q3/degree_5.png, id=227, 462.528pt x 346.896pt>
 File: ../q3/degree_5.png Graphic file (type png)
 <use ../q3/degree_5.png>
 Package pdftex.def Info: ../q3/degree_5.png  used on input line 126.
@@ -586,41 +595,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--139
  []
 
 [9 <../q3/degree_5.png>]) (../q4/q4.tex
-<../q4/gaussian_kernel_regression.png, id=235, 462.528pt x 346.896pt>
+<../q4/gaussian_kernel_regression.png, id=244, 462.528pt x 346.896pt>
 File: ../q4/gaussian_kernel_regression.png Graphic file (type png)
 <use ../q4/gaussian_kernel_regression.png>
 Package pdftex.def Info: ../q4/gaussian_kernel_regression.png  used on input line 16.
 (pdftex.def)             Requested size: 215.90616pt x 161.92957pt.
-<../q4/epanechnikov_kernel_regression.png, id=236, 462.528pt x 346.896pt>
+<../q4/epanechnikov_kernel_regression.png, id=245, 462.528pt x 346.896pt>
 File: ../q4/epanechnikov_kernel_regression.png Graphic file (type png)
 <use ../q4/epanechnikov_kernel_regression.png>
 Package pdftex.def Info: ../q4/epanechnikov_kernel_regression.png  used on input line 22.
 (pdftex.def)             Requested size: 215.90616pt x 161.92957pt.
-<../q4/tophat_kernel_regression.png, id=237, 462.528pt x 346.896pt>
+<../q4/tophat_kernel_regression.png, id=246, 462.528pt x 346.896pt>
 File: ../q4/tophat_kernel_regression.png Graphic file (type png)
 <use ../q4/tophat_kernel_regression.png>
 Package pdftex.def Info: ../q4/tophat_kernel_regression.png  used on input line 28.
 (pdftex.def)             Requested size: 215.90616pt x 161.92957pt.
- [10 <../q4/gaussian_kernel_regression.png>] [11 <../q4/epanechnikov_kernel_regression.png> <../q4/tophat_kernel_regression.png>]) (main.aux)
+ [10 <../q4/gaussian_kernel_regression.png>] [11 <../q4/epanechnikov_kernel_regression.png> <../q4/tophat_kernel_regression.png>]) (../q5/q5.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
+
+ []
+
+) [12] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9DD7A807E148C41B70BF415000870B48;4430.
+(rerunfilecheck)             Checksum: 7889450A5611DF8CBFF24F318E862263;4582.
  ) 
 Here is how much of TeX's memory you used:
- 12055 strings out of 474424
- 192027 string characters out of 5741740
+ 12098 strings out of 474424
+ 192781 string characters out of 5741740
  1945496 words of memory out of 5000000
- 34171 multiletter control sequences out of 15000+600000
- 566890 words of font info for 74 fonts, out of 8000000 for 9000
+ 34202 multiletter control sequences out of 15000+600000
+ 568568 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,574b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\mouli\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm10.pk><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (12 pages, 859889 bytes).
+ 75i,12n,79p,574b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\mouli\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbm/dpi600\bbm10.pk><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mouli/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (13 pages, 1321394 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 272 words of extra memory for PDF output out of 10000 (max. 10000000)
 

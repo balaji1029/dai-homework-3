@@ -24,3 +24,4 @@
 \contentsline {subsection}{\numberline {4.1}Explaining the code:}{10}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Bandwidth corresponding to minimum estimated risk: }{10}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Comments on similarity and dissimilarity}{11}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Multivariate Insights}{12}{section.5}%
