@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Fdb version 3
 ["pdflatex"] 1728930559 "/home/balaji/Desktop/dai/h3/report/main.tex" "main.pdf" "main" 1728930559
   "../q1/images/10binhistogram.png" 1728929242 5687 542a1f23ec0e6ec1312fe461d69ce9d0 ""
@@ -18,6 +19,27 @@
   "/home/balaji/.texlive2021/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk" 1728293184 6964 f873d7f14e3b58b5812f4edba3ac1460 ""
   "/home/balaji/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1712120738 1405646 852a6bc82eec71c7922e95e293c6dcec ""
   "/home/balaji/Desktop/dai/h3/report/main.tex" 1728811779 732 bd73ff4c83436c437380a266d415c8dc ""
+=======
+# Fdb version 4
+["pdflatex"] 1729054792.4741 "/home/aditya/Aditya/IIT Bombay/Sophomore Year/CS215/homework-3/report/main.tex" "main.pdf" "main" 1729054795.87556 0
+  "../q1/images/10binhistogram.png" 1728488407.28703 5909 8b37de798e31ff927ebce40b7f5d911d ""
+  "../q1/images/crossvalidation.png" 1728488407.28803 551873 c35e7207ae30494c3c05fcea3887dea7 ""
+  "../q1/images/optimalhistogram.png" 1728488407.28803 5354 b252d6fe973e479a1a3db1685a5c1f5f ""
+  "../q1/q1.tex" 1728488407.28803 3511 db8d78007d92d28cc23c74fffec745c7 ""
+  "../q2/images/transaction distribution.png" 1728488407.28903 101740 2256fe5b68ad15d2d6d1ffc347b260e2 ""
+  "../q2/q2.tex" 1728488407.28903 731 4758ad5b0793dae5cc2240a662d7e05e ""
+  "../q3/degree_2.png" 1729054791.83787 32336 905ce88fe00ac4b4964d1613a65b2faa ""
+  "../q3/degree_20.png" 1728553549.32665 36898 bc4de8fba71fd53ac3f6ccaa6ac68832 ""
+  "../q3/degree_5.png" 1729054792.14286 33403 ead74a7a382ac36569673f07a6f5a458 ""
+  "../q3/q3.tex" 1728653608.79079 10851 9cbe924cf15eff9534ae4679d8c80356 ""
+  "../q4/epanechnikov_kernel_regression.png" 1728490327.83539 67397 734fd48648bcc1cea257641e7a0d4f71 ""
+  "../q4/gaussian_kernel_regression.png" 1728490285.48176 64203 de5ff016b77e31e57cac49bd4ccda0da ""
+  "../q4/q4.tex" 1728490871.33036 3669 c0ee04aa38a4e6d7d07eab1074857707 ""
+  "../q4/tophat_kernel_regression.png" 1728490309.76791 66331 d4f966a970490840ecc3488c49caab40 ""
+  "/etc/texmf/web2c/texmf.cnf" 1725278438.93717 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/aditya/.texlive2023/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk" 1728488531.0696 6964 8fa3486aa48510c974802c93418fded2 ""
+  "/home/aditya/Aditya/IIT Bombay/Sophomore Year/CS215/homework-3/report/main.tex" 1728538337.0706 732 bd73ff4c83436c437380a266d415c8dc ""
+>>>>>>> fde9b7c75bb2b4be8e8e8e52b35f964a69e6f075
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -127,12 +149,23 @@
   "/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575674187 9715 b051d5b493d9fe5f4bc251462d039e5f ""
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
+<<<<<<< HEAD
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1713508950 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "main.aux" 1728930559 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
   "main.out" 0 -1 0 "pdflatex"
   "main.tex" 1728811779 732 bd73ff4c83436c437380a266d415c8dc ""
+=======
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1726230213.06164 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1726230267 8212109 7341c62aa4b067a509ef5fe5fa144f80 ""
+  "main.aux" 1729054795.70685 6378 15434da2293a97ac7d0639089edfdc8b "pdflatex"
+  "main.out" 1729054795.70885 4430 9dd7a807e148c41b70bf415000870b48 "pdflatex"
+  "main.tex" 1728538337.0706 732 bd73ff4c83436c437380a266d415c8dc ""
+  "main.toc" 1729054795.70885 2298 ed6c743152eb867e33fd8f73150b418a "pdflatex"
+>>>>>>> fde9b7c75bb2b4be8e8e8e52b35f964a69e6f075
   (generated)
   "main.aux"
   "main.log"
