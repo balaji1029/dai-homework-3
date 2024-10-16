@@ -15,8 +15,8 @@ From this,
 
 \begin{align*}
     \int \hat{f}(x)^2 dx &= \int \left(\sum_{j=1}^m \frac{\hat{p}_j}{h} \mathbbm{1}\left[x \in B_j\right]\right)^2 dx \\
-    &= \sum_{j=1}^m \int_{B_j} \left(\sum_{j=1}^m \frac{\hat{p}_j}{h} \mathbbm{1}\left[x \in B_j\right]\right)^2 dx \\
-    &= \sum_{j=1}^m \int_{B_j} \left(\frac{\hat{p}_j}{h}\right)^2 dx \\
+    &= \sum_{j=1}^m \int_{B_j} \left(\sum_{j=1}^m \frac{\hat{p}_j}{h} \mathbbm{1}\left[x \in B_j\right]\right)^2 dx & \text{Fragmenting the integral over the bins}\\
+    &= \sum_{j=1}^m \int_{B_j} \left(\frac{\hat{p}_j}{h}\right)^2 dx & \text{In the bin B_j, only the}\\
     &= \sum_{j=1}^m \left(\frac{\hat{p}_j}{h}\right)^2 \times h \\
     &= \frac{1}{n^2h} \sum_{j=1}^m v_j^2
 \end{align*}
@@ -68,7 +68,7 @@ The values of $\hat{p}_j$ are as follows:
 
 \subsubsection{Part (b)}
 
-The probablility distribution is underfit as the number of bins is too low. The distribution is not smooth and the bins are too wide. This is evident from the histogram in Figure \ref{fig:q1_2_a}.
+The probablility distribution is undersmoothed as the number of bins is too low. The distribution is not smooth and the bins are too wide. This is evident from the histogram in Figure \ref{fig:q1_2_a}.
 
 \subsubsection{Part (c)}
 
@@ -95,4 +95,5 @@ The histogram of the filtered data for number of bins = 50 is shown in Figure \r
     \caption{Histogram of filtered data with 50 bins}
     \label{fig:q1_2_e}
 \end{figure}
-    
+
+\newpage
